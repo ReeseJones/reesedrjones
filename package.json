@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c",
+    "build": "rollup -c && npx @11ty/eleventy",
     "watch": "rollup -c -w",
     "eslint": "eslint src --ext .js,.jsx,.ts,.tsx",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "clean":"rm -r public/**"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "firebase": "^10.7.2"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
