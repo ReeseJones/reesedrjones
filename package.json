@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c && npx @11ty/eleventy",
-    "watch": "rollup -c -w",
+    "build": "rollup -c && npx @11ty/eleventy && sass src/styles/styles.scss public/styles.css",
+    "watch": "concurrently --kill-others \"npx rollup -c -w\" \"npx @11ty/eleventy --watch\" \"sass -w src/styles/styles.scss public/styles.css\" \"firebase serve\"",
     "eslint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write .",
-    "clean":"rm -r public/**"
+    "clean": "rm -r public/**"
   },
   "repository": {
     "type": "git",
@@ -26,12 +26,14 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
+    "concurrently": "^8.2.2",
     "eslint": "^8.56.0",
     "rollup": "^4.9.6",
     "sass": "^1.70.0",
