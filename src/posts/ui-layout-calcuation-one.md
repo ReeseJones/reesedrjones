@@ -1,5 +1,6 @@
 ---
 title: Ui Layout Calculation Part 1
+author: Reese Jones
 tags:
     - tech
 ---

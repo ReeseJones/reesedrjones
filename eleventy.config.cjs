@@ -1,9 +1,11 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const sass = require("sass");
 const path = require("node:path");
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(syntaxHighlight);
+    eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addTemplateFormats("scss");
 
     eleventyConfig.addExtension("scss", {

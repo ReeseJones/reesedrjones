@@ -1,5 +1,6 @@
 ---
 title: Syntax Highlighting Example
+author: Reese Jones
 tags:
     - tech
 ---
