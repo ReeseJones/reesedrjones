@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c && npx @11ty/eleventy && sass src/styles/styles.scss public/styles.css",
-    "watch": "concurrently --kill-others \"npx rollup -c -w\" \"npx @11ty/eleventy --watch\" \"sass -w src/styles/styles.scss public/styles.css\" \"firebase serve\"",
+    "watch": "concurrently --kill-others \"npx rollup -c -w\" \"npx @11ty/eleventy --watch\" \"firebase serve\"",
     "eslint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write .",
     "clean": "rm -r public/**"

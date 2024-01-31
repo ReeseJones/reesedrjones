@@ -1,10 +1,10 @@
 ---
-title: Syntax Highlighting Example
+title: Ui Layout Calculation Part 1
 tags:
   - tech
 ---
 Here is a cool description.
 ```ts
-const highlightedCode = {value: 3};
+const soThisIsCool = {value: 5};
 ```
 Here is a cool description.
