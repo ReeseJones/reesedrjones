@@ -1,4 +1,7 @@
-export interface PointData {x: number, y: number}
+export interface PointData {
+    x: number;
+    y: number;
+}
 
 function toString(this: PointData) {
     return `(${this.x}, ${this.y})`;

@@ -97,12 +97,12 @@ $screen-lg: 744px;
 
 //Percent Based Columns
 @for $i from 1 through 12 {
-  .col-#{$i} {
-    -ms-flex-preferred-size: math.div(100%, 12) * $i;
-    -webkit-flex-basis: math.div(100%, 12) * $i;
-    flex-basis: math.div(100%, 12) * $i;
-    max-width: math.div(100%, 12) * $i;
-  }
+    .col-#{$i} {
+        -ms-flex-preferred-size: math.div(100%, 12) * $i;
+        -webkit-flex-basis: math.div(100%, 12) * $i;
+        flex-basis: math.div(100%, 12) * $i;
+        max-width: math.div(100%, 12) * $i;
+    }
 }
 
 //////////////////
@@ -116,12 +116,10 @@ $screen-lg: 744px;
 }
 
 @media only screen and (max-width: $screen-md) {
-
     .col-md {
         flex: 100%;
         max-width: 100%;
     }
-
 }
 
 @media only screen and (max-width: $screen-lg) {
