@@ -13,11 +13,16 @@
         <link href="/styles/styles.css" rel="stylesheet" />
     </head>
     <body>
-        <header><h1>Reese's Website</h1></header>
+        <header>
+            <h1>Reese's Website</h1>
+            <nav>
+                {% include "nav-links.html" %}
+            </nav>>
+        </header>
         <main>{{ content }}</main>
-        <ul class="base-end-content">
-            <li>im end of base content</li>
-        </ul>
+        <footer>
+            {% include "nav-links.html" %}
+        </footer>
     </body>
     <script src="/bundle.js"></script>
 </html>
